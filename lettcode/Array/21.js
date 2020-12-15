@@ -33,3 +33,23 @@ const sum = (count, pre) => {
 
 const a = sum(4, 20);
 console.log("sum", a);
+
+/**
+ * @param {number} x
+ * @return {number}
+ */
+var mySqrt = function (x) {
+  let left = 0;
+  let right = x - 1;
+  
+  while (left <= right) {
+    let mid = (left + (right - left)) >> 1;
+    if (mid * mid <= x) {
+      left = mid + 1;
+    } else if (mid * mid > x) {
+      right = mid - 1;
+    }
+  }
+  // return
+  return left;
+};
